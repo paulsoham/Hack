@@ -33,7 +33,8 @@
     
     _questionView.layer.borderWidth = 2;
     _questionAnsOptionList.layer.borderWidth = 2;
-
+//new
+    
 }
 - (void)viewDidAppear:(BOOL)animated
 {
