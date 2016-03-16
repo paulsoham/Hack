@@ -11,6 +11,12 @@
 		2A6E1EF51C997A7B00A92D90 /* MyLanLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1EF11C997A7B00A92D90 /* MyLanLoginViewController.m */; };
 		2A6E1EF61C997A7B00A92D90 /* MyLanSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1EF31C997A7B00A92D90 /* MyLanSignUpViewController.m */; };
 		AD43CBB71C996935002F0978 /* UILabel+Boldify.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBB61C996935002F0978 /* UILabel+Boldify.m */; };
+		AD43CBBA1C998A31002F0978 /* evaluateme.json in Resources */ = {isa = PBXBuildFile; fileRef = AD43CBB91C998A31002F0978 /* evaluateme.json */; };
+		AD43CBCA1C99909A002F0978 /* QuestionOption+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBC31C99909A002F0978 /* QuestionOption+CoreDataProperties.m */; };
+		AD43CBCB1C99909A002F0978 /* QuestionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBC51C99909A002F0978 /* QuestionOption.m */; };
+		AD43CBCC1C99909A002F0978 /* Question+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBC71C99909A002F0978 /* Question+CoreDataProperties.m */; };
+		AD43CBCD1C99909A002F0978 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBC91C99909A002F0978 /* Question.m */; };
+		AD43CBD01C99A6A3002F0978 /* MyLanProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBCF1C99A6A3002F0978 /* MyLanProfileViewController.m */; };
 		AD6B923E1C980A8200451277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6B923D1C980A8200451277 /* main.m */; };
 		AD6B92471C980A8200451277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6B92451C980A8200451277 /* Main.storyboard */; };
 		AD6B924A1C980A8200451277 /* MyLan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD6B92481C980A8200451277 /* MyLan.xcdatamodeld */; };
@@ -68,6 +74,17 @@
 		2A6E1EF31C997A7B00A92D90 /* MyLanSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLanSignUpViewController.m; sourceTree = "<group>"; };
 		AD43CBB51C996935002F0978 /* UILabel+Boldify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Boldify.h"; sourceTree = "<group>"; };
 		AD43CBB61C996935002F0978 /* UILabel+Boldify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Boldify.m"; sourceTree = "<group>"; };
+		AD43CBB91C998A31002F0978 /* evaluateme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = evaluateme.json; sourceTree = "<group>"; };
+		AD43CBC21C99909A002F0978 /* QuestionOption+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QuestionOption+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AD43CBC31C99909A002F0978 /* QuestionOption+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QuestionOption+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AD43CBC41C99909A002F0978 /* QuestionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionOption.h; sourceTree = "<group>"; };
+		AD43CBC51C99909A002F0978 /* QuestionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionOption.m; sourceTree = "<group>"; };
+		AD43CBC61C99909A002F0978 /* Question+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Question+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AD43CBC71C99909A002F0978 /* Question+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Question+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AD43CBC81C99909A002F0978 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		AD43CBC91C99909A002F0978 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		AD43CBCE1C99A6A3002F0978 /* MyLanProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLanProfileViewController.h; sourceTree = "<group>"; };
+		AD43CBCF1C99A6A3002F0978 /* MyLanProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLanProfileViewController.m; sourceTree = "<group>"; };
 		AD6B92391C980A8200451277 /* MyLan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6B923D1C980A8200451277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD6B92461C980A8200451277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +157,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD43CBB81C998A31002F0978 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				AD43CBB91C998A31002F0978 /* evaluateme.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		AD43CBC11C99904B002F0978 /* CoreDataClass */ = {
+			isa = PBXGroup;
+			children = (
+				AD43CBC21C99909A002F0978 /* QuestionOption+CoreDataProperties.h */,
+				AD43CBC31C99909A002F0978 /* QuestionOption+CoreDataProperties.m */,
+				AD43CBC41C99909A002F0978 /* QuestionOption.h */,
+				AD43CBC51C99909A002F0978 /* QuestionOption.m */,
+				AD43CBC61C99909A002F0978 /* Question+CoreDataProperties.h */,
+				AD43CBC71C99909A002F0978 /* Question+CoreDataProperties.m */,
+				AD43CBC81C99909A002F0978 /* Question.h */,
+				AD43CBC91C99909A002F0978 /* Question.m */,
+			);
+			name = CoreDataClass;
+			sourceTree = "<group>";
+		};
 		AD6B92301C980A8200451277 = {
 			isa = PBXGroup;
 			children = (
@@ -189,13 +229,17 @@
 				AD6B92691C982DB800451277 /* MyLanBubbleTableViewCell.m */,
 				AD6B92951C98305800451277 /* MyLanBubbleMessage.h */,
 				AD6B92961C98305800451277 /* MyLanBubbleMessage.m */,
+				AD43CBB81C998A31002F0978 /* JSON */,
 				AD6B926B1C982E2600451277 /* Images */,
 				AD6B92451C980A8200451277 /* Main.storyboard */,
 				AD6B924B1C980A8200451277 /* Assets.xcassets */,
 				AD6B924D1C980A8200451277 /* LaunchScreen.storyboard */,
 				AD6B92501C980A8200451277 /* Info.plist */,
 				AD6B92481C980A8200451277 /* MyLan.xcdatamodeld */,
+				AD43CBC11C99904B002F0978 /* CoreDataClass */,
 				AD6B923C1C980A8200451277 /* Supporting Files */,
+				AD43CBCE1C99A6A3002F0978 /* MyLanProfileViewController.h */,
+				AD43CBCF1C99A6A3002F0978 /* MyLanProfileViewController.m */,
 			);
 			path = MyLan;
 			sourceTree = "<group>";
@@ -343,6 +387,7 @@
 				AD6B92941C982E2600451277 /* Bubble-9@2x.png in Resources */,
 				AD6B92861C982E2600451277 /* Bubble-2@2x.png in Resources */,
 				AD7BE9C21C993C5C002F8256 /* face4.jpeg in Resources */,
+				AD43CBBA1C998A31002F0978 /* evaluateme.json in Resources */,
 				AD6B924F1C980A8200451277 /* LaunchScreen.storyboard in Resources */,
 				AD6B92871C982E2600451277 /* Bubble-3.png in Resources */,
 				AD6B924C1C980A8200451277 /* Assets.xcassets in Resources */,
@@ -369,13 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD43CBCD1C99909A002F0978 /* Question.m in Sources */,
+				AD43CBCC1C99909A002F0978 /* Question+CoreDataProperties.m in Sources */,
 				ADC1ECE41C98483C009E9E12 /* MyLanCircularProgressView.m in Sources */,
+				AD43CBCB1C99909A002F0978 /* QuestionOption.m in Sources */,
 				AD6B92581C980AF100451277 /* MyLanAppDelegate.m in Sources */,
 				ADC1ECE71C985D34009E9E12 /* MyLanEvaluateTableViewCell.m in Sources */,
 				AD6B92671C980E9500451277 /* MyLanMyCommunityViewController.m in Sources */,
 				AD6B92611C980E5900451277 /* MyLanMyStatusViewController.m in Sources */,
 				AD6B923E1C980A8200451277 /* main.m in Sources */,
 				ADC1ECE11C98467A009E9E12 /* MyLanUtility.m in Sources */,
+				AD43CBD01C99A6A3002F0978 /* MyLanProfileViewController.m in Sources */,
 				AD6B92641C980E8100451277 /* MyLanMyWellBeingViewController.m in Sources */,
 				AD6B926A1C982DB800451277 /* MyLanBubbleTableViewCell.m in Sources */,
 				AD6B924A1C980A8200451277 /* MyLan.xcdatamodeld in Sources */,
@@ -385,6 +434,7 @@
 				AD43CBB71C996935002F0978 /* UILabel+Boldify.m in Sources */,
 				2A6E1EF61C997A7B00A92D90 /* MyLanSignUpViewController.m in Sources */,
 				2A6E1EF51C997A7B00A92D90 /* MyLanLoginViewController.m in Sources */,
+				AD43CBCA1C99909A002F0978 /* QuestionOption+CoreDataProperties.m in Sources */,
 				AD6B925E1C980DA000451277 /* MyLanEvaluateMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

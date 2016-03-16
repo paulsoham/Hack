@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <attribute name="answer_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question_title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="quesOptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QuestionOption" syncable="YES"/>
+    </entity>
+    <entity name="QuestionOption" representedClassName="QuestionOption" syncable="YES">
+        <attribute name="option_detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="QuestionOption" positionX="-281" positionY="-801" width="128" height="88"/>
+        <element name="Question" positionX="-452" positionY="-837" width="128" height="133"/>
+    </elements>
 </model>

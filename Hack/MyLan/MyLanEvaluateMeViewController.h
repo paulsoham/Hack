@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "MyLanEvaluateTableViewCell.h"
 
-@interface MyLanEvaluateMeViewController : UIViewController{
+@interface MyLanEvaluateMeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
    
     NSTimer* m_timer;
 }
@@ -19,6 +19,8 @@
 @property (nonatomic,strong)IBOutlet UILabel * points;
 @property (nonatomic,strong)IBOutlet MyLanCircularProgressView* circularProgressView;
 @property (nonatomic,strong)IBOutlet UIImageView * questionView;
+@property (nonatomic,strong)IBOutlet UILabel * questionViewLbl;
 @property (nonatomic,strong)IBOutlet UITableView * questionAnsOptionList;
+@property (nonatomic,strong) NSDictionary * questionDictionary;
 
 @end

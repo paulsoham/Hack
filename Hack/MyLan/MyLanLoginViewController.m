@@ -28,13 +28,13 @@
 
 -(IBAction) loginPressed:(id)sender{
     NSLog(@"Login pressed");
-    if([_txtFieldUserName.text isEqualToString:@""] || [_txtFieldPassword.text isEqualToString:@""]){
-        return;
-    }else{
+   // if([_txtFieldUserName.text isEqualToString:@""] || [_txtFieldPassword.text isEqualToString:@""]){
+        //return;
+    //}else{
         MyLanAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         appDelegate.isloggedIn = true;
         [appDelegate setupTabbarControllerWithRootView:0];
-    }
+    //}
 }
 -(IBAction) signUpPressed:(id)sender{
     NSLog(@"signup pressed");

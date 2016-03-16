@@ -7,6 +7,11 @@
 //
 
 #import "MyLanEvaluateMeViewController.h"
+#import "MyLanAppDelegate.h"
+#import "Question.h"
+#import "QuestionOption.h"
+#import "MyLanUtility.h"
+
 
 @interface MyLanEvaluateMeViewController ()
 
@@ -18,7 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Evaluate ME";
-    
+//    [self.questionAnsOptionList registerClass:[MyLanEvaluateTableViewCell class] forCellReuseIdentifier:@"CellId"];
+    self.questionAnsOptionList.delegate = self;
+    self.questionAnsOptionList.dataSource = self;
     _circularProgressView.percent = 60;
     _questionNumber.text = [NSString stringWithFormat:@"2/10 \nQuestions"];
     _questionNumber.layer.cornerRadius = 25;
@@ -33,7 +40,94 @@
     
     _questionView.layer.borderWidth = 2;
     _questionAnsOptionList.layer.borderWidth = 2;
-//new
+    
+    [self renderJSON];
+   // NSLog(@"self.questionDictionary-->>%@",self.questionDictionary);
+
+    [self fetchRecord];
+}
+-(void)renderJSON{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"evaluateme" ofType:@"json"];
+    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *jsonDataArray = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    self.questionDictionary = jsonDataArray;
+    
+   
+    if (self.questionDictionary) {
+        NSMutableArray * questionsArray = [self.questionDictionary objectForKey:@"quiz_questions"];
+        if ([questionsArray count] > 0) {
+            MyLanAppDelegate *app = (MyLanAppDelegate*)[[UIApplication sharedApplication] delegate];
+            NSManagedObjectContext* context = app.managedObjectContext;
+            
+            for (NSDictionary *quesDict in questionsArray) {
+                Question *ques = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Question class]) inManagedObjectContext:context];
+                [ques setQuestion_id:quesDict[@"question_id"]];
+                [ques setQuestion_description:quesDict[@"question_description"]];
+                [ques setQuestion_image:quesDict[@"question_image"]];
+                [ques setAnswer_id:quesDict[@"answer_id"]];
+                [ques setQuestion_title:quesDict[@"question_title"]];
+                NSMutableSet *tmpSet = [NSMutableSet new];
+                for (NSDictionary *ops in quesDict[@"options"]) {
+                    QuestionOption *quesOps = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([QuestionOption class]) inManagedObjectContext:context];
+                    [quesOps setOption_id:ops[@"option_id"]];
+                    [quesOps setOption_detail:ops[@"option_detail"]];
+                    [quesOps setOrder:ops[@"order"]];
+                    [tmpSet addObject:quesOps];
+                }
+                [ques setQuesOptions:tmpSet];
+
+            }
+            NSError *errors;
+            if (![context save:&errors]) {
+                NSLog(@"Failed to save - error: %@", [errors localizedDescription]);
+            }
+        }else{
+            return;
+        }
+    }else{
+        return;
+    }
+    
+    
+
+    
+    
+    
+}
+
+-(void)fetchRecord{
+    
+    MyLanAppDelegate *app = (MyLanAppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* context = app.managedObjectContext;
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        
+    } else {
+       // NSLog(@"%@", result);
+    }
+    
+    if (result.count > 0) {
+        Question *question = (Question *)[result objectAtIndex:1];
+       // NSLog(@"-->> %@", question.question_description);
+
+        self.questionViewLbl.text = question.question_description;
+
+    }
+    [self.questionAnsOptionList reloadData];
+    
+
     
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -69,17 +163,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"CellId";
+    NSString *CellIdentifier = @"CellId";
     
-    MyLanEvaluateTableViewCell *cell = (MyLanEvaluateTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
-    {
-        cell = [[MyLanEvaluateTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.backgroundColor = self.questionAnsOptionList.backgroundColor;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-    }
-    cell.backgroundColor = [UIColor greenColor];
+    MyLanEvaluateTableViewCell *cell = (MyLanEvaluateTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+   // cell.backgroundColor = [UIColor greenColor];
     cell.questionLabel.text = @"Hola";
     return cell;
 }
