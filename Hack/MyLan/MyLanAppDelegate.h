@@ -17,6 +17,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (strong, nonatomic)  UITabBarController * tabBarController;
+@property (strong, nonatomic)  UITabBarController * tabBarControllerBeforeLogin;
+@property (assign, nonatomic)  BOOL * isloggedIn;
+-(void)setupTabbarControllerWithRootView:(int)viewControllerIndex;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

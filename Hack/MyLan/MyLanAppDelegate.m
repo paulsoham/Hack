@@ -12,68 +12,108 @@
 #import "MyLanMyStatusViewController.h"
 #import "MyLanMyWellBeingViewController.h"
 #import "MyLanMyCommunityViewController.h"
+#import "MyLanLoginViewController.h"
+#import "MyLanSignUpViewController.h"
 
 
 @implementation MyLanAppDelegate
+@synthesize isloggedIn;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.tabBarController = (UITabBarController *)self.window.rootViewController;
+    //self.tabBarController = (UITabBarController *)self.window.rootViewController;
+    [self setupTabbarControllerWithRootView:0];
+    isloggedIn = false;
     [self setupTabbarControllerWithRootView:0];
 
     return YES;
 }
 -(void)setupTabbarControllerWithRootView:(int)viewControllerIndex{
     
-    NSMutableArray *localViewControllersArray = [[NSMutableArray alloc] initWithCapacity:5];
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    
-    MyLanEducateMeViewController *educateMeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyEducateMeID"];
-    educateMeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-    educateMeViewController.tabBarItem.title = nil;
-    UINavigationController *educateMeListNav=[[UINavigationController alloc] initWithRootViewController:educateMeViewController];
-    
-    
-    
-    MyLanEvaluateMeViewController *evaluateMeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyEvaluateMeID"];
-    evaluateMeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-    evaluateMeViewController.tabBarItem.title = nil;
-    UINavigationController *evaluateMeViewNav=[[UINavigationController alloc] initWithRootViewController:evaluateMeViewController];
-    
-    
-    MyLanMyStatusViewController *myStatusViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyStatusID"];
-    myStatusViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-    myStatusViewController.tabBarItem.title = nil;
-    UINavigationController *myStatusViewNav=[[UINavigationController alloc] initWithRootViewController:myStatusViewController];
-    
-    
-    
-    MyLanMyWellBeingViewController *myWellBeingViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyWellBeingID"];
-    myWellBeingViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-    myWellBeingViewController.tabBarItem.title = nil;
-    UINavigationController *myWellBeingViewNav=[[UINavigationController alloc] initWithRootViewController:myWellBeingViewController];
-    
-    
-    
-    MyLanMyCommunityViewController *myCommunityViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCommunityID"];
-    myCommunityViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-    myCommunityViewController.tabBarItem.title = nil;
-    UINavigationController *myCommunityViewNav=[[UINavigationController alloc] initWithRootViewController:myCommunityViewController];
-    
-    
-    [localViewControllersArray addObject:educateMeListNav];
-    [localViewControllersArray addObject:evaluateMeViewNav];
-    [localViewControllersArray addObject:myStatusViewNav];
-    [localViewControllersArray addObject:myWellBeingViewNav];
-    [localViewControllersArray addObject:myCommunityViewNav];
+    if (isloggedIn) {
+        NSMutableArray *localViewControllersArray = [[NSMutableArray alloc] initWithCapacity:5];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        
+        MyLanEducateMeViewController *educateMeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyEducateMeID"];
+        educateMeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        educateMeViewController.tabBarItem.title = nil;
+        UINavigationController *educateMeListNav=[[UINavigationController alloc] initWithRootViewController:educateMeViewController];
+        
+        
+        
+        MyLanEvaluateMeViewController *evaluateMeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyEvaluateMeID"];
+        evaluateMeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        evaluateMeViewController.tabBarItem.title = nil;
+        UINavigationController *evaluateMeViewNav=[[UINavigationController alloc] initWithRootViewController:evaluateMeViewController];
+        
+        
+        MyLanMyStatusViewController *myStatusViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyStatusID"];
+        myStatusViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        myStatusViewController.tabBarItem.title = nil;
+        UINavigationController *myStatusViewNav=[[UINavigationController alloc] initWithRootViewController:myStatusViewController];
+        
+        
+        
+        MyLanMyWellBeingViewController *myWellBeingViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyWellBeingID"];
+        myWellBeingViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        myWellBeingViewController.tabBarItem.title = nil;
+        UINavigationController *myWellBeingViewNav=[[UINavigationController alloc] initWithRootViewController:myWellBeingViewController];
+        
+        
+        
+        MyLanMyCommunityViewController *myCommunityViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCommunityID"];
+        myCommunityViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        myCommunityViewController.tabBarItem.title = nil;
+        UINavigationController *myCommunityViewNav=[[UINavigationController alloc] initWithRootViewController:myCommunityViewController];
+        
+        
+        [localViewControllersArray addObject:educateMeListNav];
+        [localViewControllersArray addObject:evaluateMeViewNav];
+        [localViewControllersArray addObject:myStatusViewNav];
+        [localViewControllersArray addObject:myWellBeingViewNav];
+        [localViewControllersArray addObject:myCommunityViewNav];
+        
+        
+        self.tabBarController = [[UITabBarController alloc]init];
+        self.tabBarController.viewControllers = localViewControllersArray;
+        [self.tabBarController setSelectedIndex:viewControllerIndex];
+        
+        self.window.rootViewController = self.tabBarController;
+    }else{
 
+        NSMutableArray *localViewControllersArray = [[NSMutableArray alloc] initWithCapacity:5];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        
+        MyLanLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyLoginId"];
+        loginViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        loginViewController.tabBarItem.title = nil;
+        UINavigationController *loginListNav=[[UINavigationController alloc] initWithRootViewController:loginViewController];
+        
+        
+        
+        MyLanSignUpViewController *signUpViewController = [storyboard instantiateViewControllerWithIdentifier:@"MySignupId"];
+        signUpViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        signUpViewController.tabBarItem.title = nil;
+        UINavigationController *signupViewNav=[[UINavigationController alloc] initWithRootViewController:signUpViewController];
+        
+        
+        
+        [localViewControllersArray addObject:loginListNav];
+        [localViewControllersArray addObject:signupViewNav];
+        
+        
+        self.tabBarControllerBeforeLogin = [[UITabBarController alloc]init];
+        self.tabBarControllerBeforeLogin.viewControllers = localViewControllersArray;
+        [self.tabBarControllerBeforeLogin setSelectedIndex:0];
+        
+        self.window.rootViewController = self.tabBarControllerBeforeLogin;
+        
+    }
     
-    self.tabBarController = [[UITabBarController alloc]init];
-    self.tabBarController.viewControllers = localViewControllersArray;
-    [self.tabBarController setSelectedIndex:viewControllerIndex];
     
-    self.window.rootViewController = self.tabBarController;
     
     
     

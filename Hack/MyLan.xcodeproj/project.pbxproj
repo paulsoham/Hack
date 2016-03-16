@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6E1EF41C997A7B00A92D90 /* MyLanLanguageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1EEF1C997A7B00A92D90 /* MyLanLanguageSelectionViewController.m */; };
+		2A6E1EF51C997A7B00A92D90 /* MyLanLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1EF11C997A7B00A92D90 /* MyLanLoginViewController.m */; };
+		2A6E1EF61C997A7B00A92D90 /* MyLanSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1EF31C997A7B00A92D90 /* MyLanSignUpViewController.m */; };
 		AD43CBB71C996935002F0978 /* UILabel+Boldify.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43CBB61C996935002F0978 /* UILabel+Boldify.m */; };
 		AD6B923E1C980A8200451277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6B923D1C980A8200451277 /* main.m */; };
 		AD6B92471C980A8200451277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6B92451C980A8200451277 /* Main.storyboard */; };
@@ -57,6 +60,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6E1EEE1C997A7B00A92D90 /* MyLanLanguageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLanLanguageSelectionViewController.h; sourceTree = "<group>"; };
+		2A6E1EEF1C997A7B00A92D90 /* MyLanLanguageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLanLanguageSelectionViewController.m; sourceTree = "<group>"; };
+		2A6E1EF01C997A7B00A92D90 /* MyLanLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLanLoginViewController.h; sourceTree = "<group>"; };
+		2A6E1EF11C997A7B00A92D90 /* MyLanLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLanLoginViewController.m; sourceTree = "<group>"; };
+		2A6E1EF21C997A7B00A92D90 /* MyLanSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLanSignUpViewController.h; sourceTree = "<group>"; };
+		2A6E1EF31C997A7B00A92D90 /* MyLanSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLanSignUpViewController.m; sourceTree = "<group>"; };
 		AD43CBB51C996935002F0978 /* UILabel+Boldify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Boldify.h"; sourceTree = "<group>"; };
 		AD43CBB61C996935002F0978 /* UILabel+Boldify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Boldify.m"; sourceTree = "<group>"; };
 		AD6B92391C980A8200451277 /* MyLan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +159,12 @@
 		AD6B923B1C980A8200451277 /* MyLan */ = {
 			isa = PBXGroup;
 			children = (
+				2A6E1EEE1C997A7B00A92D90 /* MyLanLanguageSelectionViewController.h */,
+				2A6E1EEF1C997A7B00A92D90 /* MyLanLanguageSelectionViewController.m */,
+				2A6E1EF01C997A7B00A92D90 /* MyLanLoginViewController.h */,
+				2A6E1EF11C997A7B00A92D90 /* MyLanLoginViewController.m */,
+				2A6E1EF21C997A7B00A92D90 /* MyLanSignUpViewController.h */,
+				2A6E1EF31C997A7B00A92D90 /* MyLanSignUpViewController.m */,
 				AD6B92561C980AF100451277 /* MyLanAppDelegate.h */,
 				AD6B92571C980AF100451277 /* MyLanAppDelegate.m */,
 				ADC1ECDF1C98467A009E9E12 /* MyLanUtility.h */,
@@ -365,8 +380,11 @@
 				AD6B926A1C982DB800451277 /* MyLanBubbleTableViewCell.m in Sources */,
 				AD6B924A1C980A8200451277 /* MyLan.xcdatamodeld in Sources */,
 				AD6B92971C98305800451277 /* MyLanBubbleMessage.m in Sources */,
+				2A6E1EF41C997A7B00A92D90 /* MyLanLanguageSelectionViewController.m in Sources */,
 				AD6B925B1C980D5600451277 /* MyLanEducateMeViewController.m in Sources */,
 				AD43CBB71C996935002F0978 /* UILabel+Boldify.m in Sources */,
+				2A6E1EF61C997A7B00A92D90 /* MyLanSignUpViewController.m in Sources */,
+				2A6E1EF51C997A7B00A92D90 /* MyLanLoginViewController.m in Sources */,
 				AD6B925E1C980DA000451277 /* MyLanEvaluateMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
