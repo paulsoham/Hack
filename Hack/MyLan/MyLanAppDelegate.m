@@ -9,11 +9,11 @@
 #import "MyLanAppDelegate.h"
 #import "MyLanEducateMeViewController.h"
 #import "MyLanEvaluateMeViewController.h"
-#import "MyLanMyStatusViewController.h"
-#import "MyLanMyWellBeingViewController.h"
 #import "MyLanMyCommunityViewController.h"
 #import "MyLanLoginViewController.h"
 #import "MyLanSignUpViewController.h"
+#import "MyLanTestCenterViewController.h"
+#import "MyLanHomeViewController.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -55,38 +55,36 @@
         UINavigationController *educateMeListNav=[[UINavigationController alloc] initWithRootViewController:educateMeViewController];
         
         
-        
         MyLanEvaluateMeViewController *evaluateMeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyEvaluateMeID"];
         evaluateMeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
         evaluateMeViewController.tabBarItem.title = nil;
         UINavigationController *evaluateMeViewNav=[[UINavigationController alloc] initWithRootViewController:evaluateMeViewController];
         
-        
-        MyLanMyStatusViewController *myStatusViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyStatusID"];
-        myStatusViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-        myStatusViewController.tabBarItem.title = nil;
-        UINavigationController *myStatusViewNav=[[UINavigationController alloc] initWithRootViewController:myStatusViewController];
-        
-        
-        
-        MyLanMyWellBeingViewController *myWellBeingViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyWellBeingID"];
-        myWellBeingViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
-        myWellBeingViewController.tabBarItem.title = nil;
-        UINavigationController *myWellBeingViewNav=[[UINavigationController alloc] initWithRootViewController:myWellBeingViewController];
-        
-        
-        
+       
         MyLanMyCommunityViewController *myCommunityViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCommunityID"];
         myCommunityViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
         myCommunityViewController.tabBarItem.title = nil;
         UINavigationController *myCommunityViewNav=[[UINavigationController alloc] initWithRootViewController:myCommunityViewController];
         
         
+        MyLanTestCenterViewController *myTestCenterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyTestCenterID"];
+        myTestCenterViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        myTestCenterViewController.tabBarItem.title = nil;
+        UINavigationController *myTestCenterViewNav=[[UINavigationController alloc] initWithRootViewController:myTestCenterViewController];
+        
+        
+        MyLanHomeViewController *myHomeViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyHomeID"];
+        myHomeViewController.tabBarItem.image=[UIImage imageNamed:@"TabIcon.png"];
+        myHomeViewController.tabBarItem.title = nil;
+        UINavigationController *myHomeViewNav=[[UINavigationController alloc] initWithRootViewController:myHomeViewController];
+        
+        
         [localViewControllersArray addObject:educateMeListNav];
         [localViewControllersArray addObject:evaluateMeViewNav];
-        [localViewControllersArray addObject:myStatusViewNav];
-        [localViewControllersArray addObject:myWellBeingViewNav];
         [localViewControllersArray addObject:myCommunityViewNav];
+        [localViewControllersArray addObject:myTestCenterViewNav];
+        [localViewControllersArray addObject:myHomeViewNav];
+
         
         
         self.tabBarController = [[UITabBarController alloc]init];

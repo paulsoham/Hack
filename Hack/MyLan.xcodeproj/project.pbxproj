@@ -192,12 +192,12 @@
 		AD3FF45A1C9A8A8600BEF96A /* My Community Module */ = {
 			isa = PBXGroup;
 			children = (
+				AD6B92651C980E9500451277 /* MyLanMyCommunityViewController.h */,
+				AD6B92661C980E9500451277 /* MyLanMyCommunityViewController.m */,
 				AD6B92681C982DB800451277 /* MyLanBubbleTableViewCell.h */,
 				AD6B92691C982DB800451277 /* MyLanBubbleTableViewCell.m */,
 				AD6B92951C98305800451277 /* MyLanBubbleMessage.h */,
 				AD6B92961C98305800451277 /* MyLanBubbleMessage.m */,
-				AD6B92651C980E9500451277 /* MyLanMyCommunityViewController.h */,
-				AD6B92661C980E9500451277 /* MyLanMyCommunityViewController.m */,
 			);
 			name = "My Community Module";
 			sourceTree = "<group>";
@@ -205,10 +205,10 @@
 		AD3FF45B1C9A8AAF00BEF96A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AD43CBB51C996935002F0978 /* UILabel+Boldify.h */,
-				AD43CBB61C996935002F0978 /* UILabel+Boldify.m */,
 				AD6B92561C980AF100451277 /* MyLanAppDelegate.h */,
 				AD6B92571C980AF100451277 /* MyLanAppDelegate.m */,
+				AD43CBB51C996935002F0978 /* UILabel+Boldify.h */,
+				AD43CBB61C996935002F0978 /* UILabel+Boldify.m */,
 				ADC1ECDF1C98467A009E9E12 /* MyLanUtility.h */,
 				ADC1ECE01C98467A009E9E12 /* MyLanUtility.m */,
 			);

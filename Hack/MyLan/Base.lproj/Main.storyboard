@@ -226,7 +226,7 @@
         <!--My Lan Home View Controller-->
         <scene sceneID="OXo-1G-oL3">
             <objects>
-                <viewController id="MIk-ns-pSF" customClass="MyLanHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyHomeID" id="MIk-ns-pSF" customClass="MyLanHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vhs-w1-Crh"/>
                         <viewControllerLayoutGuide type="bottom" id="gvx-CT-8mq"/>
@@ -244,7 +244,7 @@
         <!--My Lan Test Center View Controller-->
         <scene sceneID="CR6-Cj-5T9">
             <objects>
-                <viewController id="Nwe-GD-Xc5" customClass="MyLanTestCenterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyTestCenterID" id="Nwe-GD-Xc5" customClass="MyLanTestCenterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Giz-1G-50G"/>
                         <viewControllerLayoutGuide type="bottom" id="OIy-hN-2Ee"/>
