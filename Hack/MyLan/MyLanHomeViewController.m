@@ -1,24 +1,22 @@
 //
-//  MyLanMyWellBeingViewController.m
+//  MyLanHomeViewController.m
 //  MyLan
 //
-//  Created by TSI on 15/03/16.
+//  Created by TSI on 17/03/16.
 //  Copyright © 2016 CTS. All rights reserved.
 //
 
-#import "MyLanMyWellBeingViewController.h"
+#import "MyLanHomeViewController.h"
 
-@interface MyLanMyWellBeingViewController ()
+@interface MyLanHomeViewController ()
 
 @end
 
-@implementation MyLanMyWellBeingViewController
+@implementation MyLanHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"My Well Being";
-
 }
 
 - (void)didReceiveMemoryWarning {

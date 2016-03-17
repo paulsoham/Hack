@@ -1,24 +1,22 @@
 //
-//  MyLanMyStatusViewController.m
+//  MyLanTestCenterViewController.m
 //  MyLan
 //
-//  Created by TSI on 15/03/16.
+//  Created by TSI on 17/03/16.
 //  Copyright © 2016 CTS. All rights reserved.
 //
 
-#import "MyLanMyStatusViewController.h"
+#import "MyLanTestCenterViewController.h"
 
-@interface MyLanMyStatusViewController ()
+@interface MyLanTestCenterViewController ()
 
 @end
 
-@implementation MyLanMyStatusViewController
+@implementation MyLanTestCenterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"My Status";
-
 }
 
 - (void)didReceiveMemoryWarning {
